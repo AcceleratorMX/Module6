@@ -6,6 +6,27 @@ public class Point {
     private int y;
     private int z;
 
+    public Point() {
+        System.out.println("Empty");
+    }
+
+    public Point(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    public Point(int value) {
+        this.x = value;
+        this.y = value;
+        this.z = value;
+    }
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     @Override
     public String toString() {
         return "Point{" +
