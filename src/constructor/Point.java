@@ -1,4 +1,4 @@
-package src.constructor;
-
-public class Point {
-}
+//package src.constructor;
+//
+//public class Point {
+//}
