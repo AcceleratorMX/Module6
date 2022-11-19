@@ -1,5 +1,9 @@
 package src.HomeWork.h13;
 
+
+import java.util.Arrays;
+import java.util.Objects;
+
 class QuarkeTrackTest {
     public static void main(String[] args) {
         int[] track1Data = {1, 3, 5};
@@ -25,8 +29,27 @@ class QuarkeTrackTest {
 }
 
 class QuarkeTrack {
+    private int lines;
+
 
     public QuarkeTrack(int[] lines) {
+        int sum = 0;
+        for (int i=0;i < lines.length;i++){
+            sum = sum+lines[i];
+        }
+        this.lines = sum;
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        QuarkeTrack quarkeTrack = (QuarkeTrack) o;
+        return  lines == quarkeTrack.lines;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(lines);
     }
 }
